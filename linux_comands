@@ -1,0 +1,4 @@
+ sshpass -p admin scp Admin@192.168.1.1:/etc/udhcpd.conf ~/dhcp.txt
+sshpass -p admin scp Admin@192.168.1.1:/var/udhcpd.leases ~/dhcp.leases
+wc -l dhcp.conf | cut -d' ' -f1
+ dhcpd-pools -c dhcp.conf -l dhcp.leases -f c
